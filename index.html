@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="index.css" />
     <script defer src="src/clock.js"></script>
     <script defer src="src/greeting.js"></script>
+    <script defer src="src/todo.js"></script>
   </head>
 
   <body>
@@ -22,5 +23,16 @@
       />
     </form>
     <h2 class="js-greetings-greeting greetings"></h2>
+
+    <form class="js-todo-form">
+      <label for="todo">What is your main focus for today?</label>
+      <input
+        class="js-todo-input"
+        id="todo"
+        type="text"
+        placeholder="Write a to do"
+      />
+    </form>
+    <ul class="js-todo-list"></ul>
   </body>
 </html>
