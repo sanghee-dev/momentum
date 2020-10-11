@@ -4,3 +4,12 @@
 body {
   font-family: "Raleway", sans-serif;
 }
+
+.form,
+.greetings {
+  display: none;
+}
+
+.showing {
+  display: block;
+}
