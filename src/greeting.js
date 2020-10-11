@@ -1,6 +1,6 @@
-const form = document.querySelector(".js-form"),
-  input = document.querySelector("input"),
-  greeting = document.querySelector(".js-greetings");
+const form = document.querySelector(".js-greetings-form"),
+  input = document.querySelector(".js-greetings-input"),
+  greeting = document.querySelector(".js-greetings-greeting");
 
 // currentUser O
 function paintGreeting(currentUser) {
