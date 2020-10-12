@@ -1,35 +1,35 @@
-const form = document.querySelector(".js-greetings-form"),
-  input = document.querySelector(".js-greetings-input"),
-  greeting = document.querySelector(".js-greetings-greeting");
+const greetingsForm = document.querySelector(".js-greetings-form"),
+  greetingsInput = document.querySelector(".js-greetings-input"),
+  greetingsText = document.querySelector(".js-greetings-text");
 
 // currentUser O
 function paintGreeting(currentUser) {
-  form.classList.remove("showing");
-  greeting.classList.add("showing");
+  greetingsForm.classList.remove("showing");
+  greetingsText.classList.add("showing");
 
   const date = new Date();
   const hours = date.getHours();
 
   if (6 <= hours >= 6 && hours < 12) {
-    greeting.innerHTML = `Good morning, ${currentUser}.`;
+    greetingsText.innerHTML = `Good morning, ${currentUser}.`;
   } else if (12 <= hours && hours < 18) {
-    greeting.innerHTML = `Good afternoon, ${currentUser}.`;
+    greetingsText.innerHTML = `Good afternoon, ${currentUser}.`;
   } else {
-    greeting.innerHTML = `Good evening, ${currentUser}.`;
+    greetingsText.innerHTML = `Good evening, ${currentUser}.`;
   }
 }
 
 // X -- > submit --> set
 function handlesubmit(event) {
   event.preventDefault();
-  localStorage.setItem("currentUser", input.value);
-  paintGreeting(input.value);
+  localStorage.setItem("currentUser", greetingsInput.value);
+  paintGreeting(greetingsInput.value);
 }
 
 // currentUser X
 function askForName() {
-  form.classList.add("showing");
-  form.addEventListener("submit", handlesubmit);
+  greetingsForm.classList.add("showing");
+  greetingsForm.addEventListener("submit", handlesubmit);
 }
 
 function loadName() {
