@@ -20,7 +20,7 @@ function paintGreeting(currentUser) {
 }
 
 // X -- > submit --> set
-function handlesubmit(event) {
+function handleSubmit(event) {
   event.preventDefault();
   localStorage.setItem("currentUser", greetingsInput.value);
   paintGreeting(greetingsInput.value);
@@ -29,7 +29,7 @@ function handlesubmit(event) {
 // currentUser X
 function askForName() {
   greetingsForm.classList.add("showing");
-  greetingsForm.addEventListener("submit", handlesubmit);
+  greetingsForm.addEventListener("submit", handleSubmit);
 }
 
 function loadName() {
