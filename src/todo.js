@@ -35,7 +35,16 @@ function handleSubmit(event) {
   toDoInput.value = "";
 }
 
+function loadToDos() {
+  const loadedToDos = localStorage.getItem("toDos");
+  if (loadedToDos) {
+    const parsedToDos = JSON.parse(loadedToDos);
+    parsedToDos.forEach((toDo) => paintToDo(toDo.text));
+  }
+}
+
 function init() {
+  loadToDos();
   toDoForm.addEventListener("submit", handleSubmit);
 }
 
