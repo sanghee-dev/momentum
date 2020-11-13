@@ -5,7 +5,7 @@
 - To-do list with daily inspiration
 - https://sanghee-dev.github.io/momentum/
 
-### Main function
+### Main functions
 
 - See current time
 - Set a daily goal/focus/intention
